@@ -5,6 +5,7 @@ function Footer() {
     return (
         <div className={styles.container}>
             <div className={styles.logo}>Bleksi</div>
+            <p>Created by Mykola Naumenko</p>
         </div>
     );
 }

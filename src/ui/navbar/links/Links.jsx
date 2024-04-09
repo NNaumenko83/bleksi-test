@@ -1,8 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 import styles from './links.module.css';
-import NavLink from './navLink/navLink';
 import Image from 'next/image';
+import { NavLink } from './navlink/navLink';
+
 // import { handleLogout } from '@/lib/action';
 
 const links = [
