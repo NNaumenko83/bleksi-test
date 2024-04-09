@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import styles from './links.module.css';
 import Image from 'next/image';
 import { NavLink } from './navlink/navLink';
-
-// import { handleLogout } from '@/lib/action';
+import { handleLogout } from '@/lib/action';
 
 const links = [
     {
@@ -25,12 +24,11 @@ function Links({ session }) {
                 {links.map(link => (
                     <NavLink item={link} key={link.path} />
                 ))}
-                {session ? (
-                    /* .user ? */ <>
-                        <p>Logout</p>
-                        {/* <form action={handleLogout}>
+                {session?.user ? (
+                    <>
+                        <form action={handleLogout}>
                             <button className={styles.logout}>Logout</button>
-                        </form> */}
+                        </form>
                     </>
                 ) : (
                     <NavLink item={{ title: 'Login', path: '/login' }} />
