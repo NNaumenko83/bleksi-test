@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import styles from './home.module.css';
 import Link from 'next/link';
 
@@ -9,9 +8,10 @@ const Home = () => {
                 <h1 className={styles.title}>
                     Your Story Begins Here: Join Our Blog Community.
                 </h1>
-                <div className={styles.buttons}>
-                    <Link href="/login" />
-                </div>
+
+                <Link className={styles.login} href="/login">
+                    Login
+                </Link>
             </div>
         </div>
     );

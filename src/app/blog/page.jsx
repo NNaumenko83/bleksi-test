@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './blog.module.css';
-import PostCard from '@/components/postCard/PostCard';
 import { getPosts } from '@/lib/data';
+import PostCard from '@/ui/postCard/PostCard';
 
 async function BlogPage() {
     const posts = await getPosts();
