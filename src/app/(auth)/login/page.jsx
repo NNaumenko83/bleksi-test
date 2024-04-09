@@ -1,13 +1,13 @@
 import { handleGoogleLogin } from '@/lib/action';
+import styles from './login.module.css';
 
 import React from 'react';
 
 async function LoginPage() {
     return (
-        <div>
-            <h1>Login page</h1>
+        <div className={styles.container}>
             <form action={handleGoogleLogin}>
-                <button>Login with Google</button>
+                <button className={styles.button}>Login with Google</button>
             </form>
         </div>
     );

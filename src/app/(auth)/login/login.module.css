@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    padding: 20px;
+    min-width: 120px;
+    max-width: 250px;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 1px solid var(--text);
+    background-color: transparent;
+
+    text-align: center;
+    color: var(--text);
+
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 500;
+
+    transition: all 250ms ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--text);
+    color: var(--bg);
+}
