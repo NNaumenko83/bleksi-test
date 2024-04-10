@@ -6,8 +6,12 @@
 
 .button {
     padding: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
     min-width: 120px;
-    max-width: 250px;
+    max-width: 300px;
     margin: 0 auto;
     cursor: pointer;
     border: 1px solid var(--text);
@@ -18,7 +22,7 @@
 
     border-radius: 20px;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
 
     transition: all 250ms ease-in-out;
 }
@@ -26,4 +30,9 @@
 .button:hover {
     background-color: var(--text);
     color: var(--bg);
+}
+
+.googleIcon {
+    width: 25px;
+    height: 25px;
 }
