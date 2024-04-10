@@ -1,7 +1,9 @@
+import { auth } from '@/lib/auth';
 import styles from './home.module.css';
 import Link from 'next/link';
 
-const Home = () => {
+const Home = async () => {
+    const session = await auth();
     return (
         <div className={styles.container}>
             <div className={styles.textContainer}>
@@ -9,9 +11,11 @@ const Home = () => {
                     Your Story Begins Here: Join Our Blog Community.
                 </h1>
 
-                <Link className={styles.login} href="/login">
-                    Login
-                </Link>
+                {!session?.user && (
+                    <Link className={styles.login} href="/login">
+                        Login
+                    </Link>
+                )}
             </div>
         </div>
     );

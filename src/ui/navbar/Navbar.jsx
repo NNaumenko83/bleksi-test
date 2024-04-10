@@ -6,7 +6,7 @@ import { auth } from '@/lib/auth';
 
 async function Navbar() {
     const session = await auth();
-    // const session = true;
+
     console.log('session:', session);
 
     return (
