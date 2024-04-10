@@ -8,7 +8,9 @@ const Home = async () => {
         <div className={styles.container}>
             <div className={styles.textContainer}>
                 <h1 className={styles.title}>
-                    Your Story Begins Here: Join Our Blog Community.
+                    Your Story Begins Here:
+                    <br />
+                    Join Our Blog Community.
                 </h1>
 
                 {!session?.user && (

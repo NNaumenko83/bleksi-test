@@ -10,3 +10,9 @@
     background-color: var(--text);
     color: var(--bg);
 }
+
+.link:hover {
+    background-color: var(--text);
+    color: var(--bg);
+    transition: all 250ms ease-in-out;
+}
