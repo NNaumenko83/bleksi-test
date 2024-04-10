@@ -1,6 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with
 [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+[Live Demo](https://bleksi-test.vercel.app/)
+
 ## Bleksi Test Task
 
 This is a simple web application implementing Google authentication and
@@ -26,6 +28,10 @@ Before you begin, ensure you have the following installed:
 2. Navigate to the project directory: `cd bleksi-test`
 
 3. Install the project's dependencies: `npm install`
+
+4. Make sure to set up your environment variables. The project utilizes
+   environment variables (.env) for configuration. Ensure you have the necessary
+   variables set up according to the project requirements.
 
 ### Usage
 
