@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './PostCard.module.css';
 import Image from 'next/image';
+import { format } from 'date-fns';
 
 const PostCard = ({ post }) => {
     return (
@@ -16,7 +17,9 @@ const PostCard = ({ post }) => {
                         />
                     </div>
                 )}
-                <span className={styles.date}>01.01.2024</span>
+                <span className={styles.date}>
+                    {format(new Date(post.createdAt), 'dd.MM.yyyy')}
+                </span>
             </div>
             <div className={styles.bottom}>
                 <h1 className={styles.title}>{post.title}</h1>
