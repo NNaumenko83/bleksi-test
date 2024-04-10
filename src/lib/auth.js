@@ -19,7 +19,7 @@ export const {
     ],
     callbacks: {
         async signIn({ user, account, profile }) {
-            console.log(user, account, 'profile', profile);
+      
             if (account.provider === 'google') {
                 connectToDb();
                 try {
@@ -33,7 +33,7 @@ export const {
                         await newUser.save();
                     }
                 } catch (error) {
-                    console.log(error);
+                
                     return false;
                 }
             }

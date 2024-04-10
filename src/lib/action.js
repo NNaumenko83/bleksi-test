@@ -6,6 +6,5 @@ export const handleGoogleLogin = async () => {
 };
 
 export const handleLogout = async () => {
-    console.log('handleLogout');
     await signOut();
 };
