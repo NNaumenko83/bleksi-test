@@ -1,5 +1,6 @@
 'use client';
-import React, { useState } from 'react';
+
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './links.module.css';
 import Image from 'next/image';
 import { NavLink } from './navlink/navLink';
@@ -18,6 +19,26 @@ const links = [
 
 function Links({ session }) {
     const [open, setOpen] = useState(false);
+    const mobileLinksRef = useRef(null);
+
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (
+                open &&
+                mobileLinksRef.current &&
+                !mobileLinksRef.current.contains(event.target)
+            ) {
+                setOpen(false);
+            }
+        }
+
+        document.addEventListener('click', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, [open]);
+
     return (
         <div className={styles.container}>
             <div className={styles.links}>
@@ -44,7 +65,7 @@ function Links({ session }) {
                 onClick={() => setOpen(!open)}
             />
             {open && (
-                <div className={styles.mobileLinks}>
+                <div ref={mobileLinksRef} className={styles.mobileLinks}>
                     {links.map(link => (
                         <NavLink item={link} key={link.path} />
                     ))}
